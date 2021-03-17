@@ -1,0 +1,1513 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ovid.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Ovid.Data.Auth.Models.Api.ApiAuthRequest">
+            <summary>
+            Api Authentication Tokens For Users
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.ApiAuthRequest.AuthRequestId">
+            <summary>
+            Record ID
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.ApiAuthRequest.ProviderName">
+            <summary>
+            Provider Name
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.ApiAuthRequest.AuthToken">
+            <summary>
+            Authentication Token
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.ApiAuthRequest.Expires">
+            <summary>
+            Token Expires
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.ApiAuthRequest.RefreshToken">
+            <summary>
+            Refresh Token
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.ApiAuthRequest.UserId">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.ApiAuthRequest.User">
+            <summary>
+            User Naivagtion Property
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Auth.Models.Api.SocialProvider">
+            <summary>
+            Social Media Provider
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.SocialProvider.ProviderId">
+            <summary>
+            Provider Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.SocialProvider.Name">
+            <summary>
+            Provider Name
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.SocialProvider.Icon">
+            <summary>
+            Icon
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.SocialProvider.AppId">
+            <summary>
+            Application Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.SocialProvider.AppSecret">
+            <summary>
+            Aplication Secret
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.SocialProvider.AuthEndPoint">
+            <summary>
+            Auth Endpoint
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.SocialProvider.ApiEndPointBase">
+            <summary>
+            Api Base Endpoint
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Api.SocialProvider.ConfigData">
+            <summary>
+            Configuration Data for Provider
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Auth.Models.Config.ClaimConfig">
+            <summary>
+            Claim Confirguration
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Config.ClaimConfig.AvailableClaims">
+            <summary>
+            List of Avaible Claims
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Auth.Models.Users.ApplicationRole">
+            <summary>
+            Application User Roles
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Users.ApplicationRole.Users">
+            <summary>
+            Navigation property for the users in this role.
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Users.ApplicationRole.Claims">
+            <summary>
+            Navigation property for claims in this role.
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Auth.Models.Users.ApplicationUser">
+            <summary>
+            Application User Account
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Users.ApplicationUser.Roles">
+            <summary>
+            Navigation property for the roles this user belongs to.
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Users.ApplicationUser.Claims">
+            <summary>
+            Navigation property for the claims this user possesses.
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.Models.Users.ApplicationUser.ApiTokens">
+            <summary>
+            Api Authtication Tokens
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Auth.OvidAuthContext">
+            <summary>
+            Ovid Auth Db Context
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.OvidAuthContext.ApiAuthRequests">
+            <summary>
+            Authorization Apis
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Auth.OvidAuthContext.SocialProviders">
+            <summary>
+            Social Providers
+            </summary>
+        </member>
+        <member name="M:Ovid.Data.Auth.OvidAuthContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Ovid.Data.Auth.OvidAuthContext})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Ovid.Data.Auth.OvidAuthContext.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Ovid.Data.Auth.OvidAuthContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Configure Connection
+            </summary>
+            <param name="optionsBuilder"></param>
+        </member>
+        <member name="M:Ovid.Data.Auth.OvidAuthContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Cretae Model
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:Ovid.Data.Models.Accounts.AccountType">
+            <summary>
+            Account Types
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.AccountType.AccontTypeId">
+            <summary>
+            Record Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.AccountType.Name">
+            <summary>
+            Account Type Name
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.AccountType.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.AccountType.UserAccounts">
+            <summary>
+            User Accounts Navigation Property
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Accounts.Followed">
+            <summary>
+            Followed Users
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.Followed.FollowId">
+            <summary>
+            Follow Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.Followed.FollowerId">
+            <summary>
+            Follower
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.Followed.Follower">
+            <summary>
+            Follwer Nvigation
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.Followed.FollowedId">
+            <summary>
+            Followed User
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.Followed.FollowedAccount">
+            <summary>
+            Followed Navigation
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.Followed.SendNotifications">
+            <summary>
+            Send User notifications on post
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Accounts.UserAccount">
+            <summary>
+            User Account Record
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.AccountId">
+            <summary>
+            Account Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.UserId">
+             <summary>
+            Application User Id
+             </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.TypeId">
+            <summary>
+            Accout Type Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.AccountType">
+            <summary>
+            Account Type Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.DisplayName">
+            <summary>
+            Dispplay Name
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.DateOfBirth">
+            <summary>
+            Date Of Birth
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.LastLoginIp">
+            <summary>
+            Last Login Ip
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.Country">
+            <summary>
+            Country
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.Province">
+            <summary>
+            Province / State
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.City">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.PostalCode">
+            <summary>
+            Postal Code
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.OcupationId">
+            <summary>
+            Occupation Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.Ocupation">
+            <summary>
+            /Ocupation Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.SalaryId">
+            <summary>
+            /Salary Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.Salalary">
+            <summary>
+            Salary Navigation
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.Avatar">
+            <summary>
+            Avatar
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.ReputationPoints">
+            <summary>
+            Reputation Points
+            </summary>
+        </member>
+        <member name="M:Ovid.Data.Models.Accounts.UserAccount.GetDataHash">
+            <summary>
+            Get Record Has
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.UserPosts">
+            <summary>
+            User Post Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.PostImages">
+            <summary>
+            Post Images Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.Ratings">
+            <summary>
+            Ratings Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.SocialFeeds">
+            <summary>
+            Social Feeds Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.Advertisments">
+            <summary>
+            Adds Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.Intrests">
+            <summary>
+            Instrest Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.Followers">
+            <summary>
+            Followers Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.Followed">
+            <summary>
+            Followed Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.Campaigns">
+            <summary>
+            Campaigns Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.Marketers">
+            <summary>
+            Marketers Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.UserAddClicks">
+            <summary>
+            User Add Clicks Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.CampaignClicks">
+            <summary>
+            Campaign Clicks Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.CampaignItemClicks">
+            <summary>
+            Campaign Item Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserAccount.ProductClicks">
+            <summary>
+            Product Clicks Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Accounts.UserIntrest">
+            <summary>
+            User Intrest 
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserIntrest.UserIntrestId">
+            <summary>
+            Intrest Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserIntrest.AccountId">
+            <summary>
+            Account 
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserIntrest.User">
+            <summary>
+            Account Navigation Property
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserIntrest.IntrestId">
+            <summary>
+            Intrest 
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Accounts.UserIntrest.Intrest">
+            <summary>
+            Iintrest Navigation Property
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Advertising.Advertisment">
+            <summary>
+            Advertising Material
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.Advertisment.AddId">
+            <summary>
+            Add Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.Advertisment.AccountId">
+            <summary>
+            Account Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.Advertisment.User">
+            <summary>
+            User Account Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.Advertisment.MarketerId">
+            <summary>
+            Markerter Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.Advertisment.Markerter">
+            <summary>
+            Mareter Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.Advertisment.AltText">
+            <summary>
+            Image Alt Text
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.Advertisment.AddData">
+            <summary>
+            Image Data
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.Advertisment.Clicks">
+            <summary>
+            Number of Clicks
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.Advertisment.Impressions">
+            <summary>
+            Number of Impressions shown
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.Advertisment.Weight">
+            <summary>
+            Add Roatation Weight
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.Advertisment.StartDate">
+            <summary>
+            Start Date
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.Advertisment.EndDate">
+            <summary>
+            End Date
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.Advertisment.AddClicks">
+            <summary>
+            Add Clicks Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Advertising.UserAddClick">
+            <summary>
+            User Adveritisment Clicked
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.UserAddClick.ClickId">
+            <summary>
+            Record ID
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.UserAddClick.AddId">
+            <summary>
+            Advertisement
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.UserAddClick.Advertisment">
+            <summary>
+            Add Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.UserAddClick.AccountId">
+            <summary>
+            User account
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.UserAddClick.User">
+            <summary>
+            User Account Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Advertising.UserAddClick.ClickDate">
+            <summary>
+            Clicked Date
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Campaigns.Campaign">
+            <summary>
+            Promotional Campign 
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.CampaignId">
+            <summary>
+            Campaign Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.TypeId">
+            <summary>
+            Campaign Type Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.CampaignType">
+            <summary>
+            Campaign Type Name
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.AccountId">
+            <summary>
+            Account Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.User">
+            <summary>
+            User Account Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.StartDate">
+            <summary>
+            Campaign Starts
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.EndDate">
+            <summary>
+            Campaign Ends
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.Graphic">
+            <summary>
+            Banner Image
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.Width">
+            <summary>
+            Banner Width
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.Height">
+            <summary>
+            Banner Height
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.Clicks">
+            <summary>
+            Banner Clicks
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.Impressions">
+            <summary>
+            Banner Impressions
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.Items">
+            <summary>
+            Items Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.Campaign.UserClicks">
+            <summary>
+            User Clicks Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Campaigns.CampaignType">
+            <summary>
+            Campaign Types
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignType.TypeId">
+            <summary>
+            Record Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignType.Name">
+            <summary>
+            Type Name
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignType.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignType.Campaigns">
+            <summary>
+            Campaign Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Campaigns.CampaignItem">
+            <summary>
+            Campaing Items
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignItem.CampItemId">
+            <summary>
+            Record Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignItem.CampaignId">
+            <summary>
+            Campaign
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignItem.Campaign">
+            <summary>
+            Capaign Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignItem.ProductId">
+            <summary>
+            Product
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignItem.Product">
+            <summary>
+            Product Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignItem.SalePrice">
+            <summary>
+            Sale Price
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignItem.RegularPrice">
+            <summary>
+            Reqular Price
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignItem.SalesText">
+            <summary>
+            Sale tag line or text (optional)
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignItem.CampaignLink">
+            <summary>
+            Affiliate Link
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignItem.Clicks">
+            <summary>
+            Affiliiate Link Clicks
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.CampaignItem.ItemClicks">
+            <summary>
+            Campaign Item Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Campaigns.UserCampaignClick">
+            <summary>
+            User Campign Click Tracking
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.UserCampaignClick.ClickId">
+            <summary>
+            Record Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.UserCampaignClick.ClickDate">
+            <summary>
+            Clicked Date
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.UserCampaignClick.CampaignId">
+            <summary>
+            Campaign
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.UserCampaignClick.Campaign">
+            <summary>
+            Campaign Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.UserCampaignClick.AccountId">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.UserCampaignClick.User">
+            <summary>
+            User Account Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Campaigns.UserCampaignItemClick">
+            <summary>
+            User Campign Click Tracing
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.UserCampaignItemClick.ClickId">
+            <summary>
+            Record Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.UserCampaignItemClick.ClickDate">
+            <summary>
+            Clicked Date
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.UserCampaignItemClick.CampItemId">
+            <summary>
+            Campaign
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.UserCampaignItemClick.Item">
+            <summary>
+            Item Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.UserCampaignItemClick.AccountId">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Campaigns.UserCampaignItemClick.User">
+            <summary>
+            User Account Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Common.AuditableBase`1">
+            <summary>
+            Auditable Base Class
+            </summary>
+            <typeparam name="T">Object Being Auidtied</typeparam>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.AuditableBase`1.CreatedBy">
+            <summary>
+            Created By
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.AuditableBase`1.UpdatedBy">
+            <summary>
+            Updated By
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.AuditableBase`1.Created">
+            <summary>
+            Date Created
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.AuditableBase`1.Updated">
+            <summary>
+            Date Updated
+            </summary>
+        </member>
+        <member name="M:Ovid.Data.Models.Common.AuditableBase`1.GetHash(`0)">
+            <summary>
+            Object Hash
+            </summary>
+            <param name="obj">Object</param>
+            <returns>Hashed String</returns>
+        </member>
+        <member name="M:Ovid.Data.Models.Common.AuditableBase`1.GetDataHash">
+            <summary>
+            Get Data Hash
+            </summary>
+            <returns>Hashed object string</returns>
+        </member>
+        <member name="T:Ovid.Data.Models.Common.IAuditable">
+            <summary>
+            Auitable Trail Interface
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.IAuditable.CreatedBy">
+            <summary>
+            Cretaed By User ID
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.IAuditable.UpdatedBy">
+            <summary>
+            Updated By User Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.IAuditable.Created">
+            <summary>
+            Created Date
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.IAuditable.Updated">
+            <summary>
+            Updated Date
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Common.IntrestList">
+            <summary>
+            Intrest List
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.IntrestList.IntrestId">
+            <summary>
+            Record Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.IntrestList.Intrest">
+            <summary>
+            Instrest
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.IntrestList.UserIntrests">
+            <summary>
+            User Intrest Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Common.Ocupation">
+            <summary>
+            Ocupation List
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.Ocupation.OcupationId">
+            <summary>
+            Record Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.Ocupation.Name">
+            <summary>
+            Ocumaption Name
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.Ocupation.UserAccounts">
+            <summary>
+            User account Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Common.Salalary">
+            <summary>
+            Salary Range
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.Salalary.SalaryId">
+            <summary>
+            Record Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.Salalary.StartRange">
+            <summary>
+            Start Range
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.Salalary.EndRange">
+            <summary>
+            End Range
+            </summary>
+        </member>
+        <member name="M:Ovid.Data.Models.Common.Salalary.ToString">
+            <summary>
+            Formated string in start - end currency formated
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="P:Ovid.Data.Models.Common.Salalary.UserAccounts">
+            <summary>
+            User Account Navigation
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Marketers.Marketer">
+            <summary>
+            Marketer Data
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Marketers.Marketer.MarketerId">
+            <summary>
+            Marketer Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Marketers.Marketer.Name">
+            <summary>
+            Manufacture Name
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Marketers.Marketer.Logo">
+            <summary>
+            Logo
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Marketers.Marketer.WebSite">
+            <summary>
+            Main Web Url
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Marketers.Marketer.SupportUrl">
+            <summary>
+            Support Url
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Marketers.Marketer.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Marketers.Marketer.ContactEmail">
+            <summary>
+            Contact Email
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Marketers.Marketer.SupportPhone">
+            <summary>
+            Support Phone
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Marketers.Marketer.UserId">
+            <summary>
+            Record Creted By
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Marketers.Marketer.User">
+            <summary>
+            User Account Navigation
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Marketers.Marketer.SponsoredProducts">
+            <summary>
+            Products Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Marketers.Marketer.Advertisments">
+            <summary>
+            Adds Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Posts.PostImage">
+            <summary>
+            /Post Image Record
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.PostImage.ImageId">
+            <summary>
+            Record Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.PostImage.AltText">
+            <summary>
+            Image Alt Text
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.PostImage.ImageData">
+            <summary>
+            Image Data
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.PostImage.AccountId">
+            <summary>
+            Account 
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.PostImage.User">
+            <summary>
+            User account nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.PostImage.PostId">
+            <summary>
+            Post
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.PostImage.Post">
+            <summary>
+            User Post Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Posts.UserPost">
+            <summary>
+            User Item Post
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.UserPost.PostId">
+            <summary>
+            Post Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.UserPost.AccountId">
+            <summary>
+            User Account
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.UserPost.UserAccount">
+            <summary>
+            User account Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.UserPost.ItemText">
+            <summary>
+            Item Text
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.UserPost.ItemRating">
+            <summary>
+            Item Rating
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.UserPost.ReviewLink">
+            <summary>
+            Review Url Link
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.UserPost.ReviewText">
+            <summary>
+            Review Text
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.UserPost.ProductId">
+            <summary>
+            Product Id if Sponsored
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.UserPost.Product">
+            <summary>
+            Product Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.UserPost.ParentPostId">
+            <summary>
+            Parent post Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.UserPost.Ratings">
+            <summary>
+            Rating Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Posts.UserPost.Images">
+            <summary>
+            Images Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Products.ProductCategory">
+            <summary>
+            Product Catgory
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.ProductCategory.CategoryId">
+            <summary>
+            Record Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.ProductCategory.Name">
+            <summary>
+            Catehory Names
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.ProductCategory.Icon">
+            <summary>
+            Icon
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.ProductCategory.Products">
+            <summary>
+            Product Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Products.ProductImage">
+            <summary>
+            Product Images
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.ProductImage.ImageId">
+            <summary>
+            Image Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.ProductImage.ProductId">
+            <summary>
+            Product Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.ProductImage.SponsoredProduct">
+            <summary>
+            Product Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.ProductImage.AltText">
+            <summary>
+            Image Alt Text
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.ProductImage.ImageData">
+            <summary>
+            Image Data
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Products.SponsoredProduct">
+            <summary>
+            Sponsored Products
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.ProductId">
+            <summary>
+            /Product Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.MarkerterId">
+            <summary>
+            Manufacture
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.Marketer">
+            <summary>
+            Marketer Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.CategoryId">
+            <summary>
+            Product Category
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.Category">
+            <summary>
+            Category Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.Name">
+            <summary>
+            Product Name
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.ProductLink">
+            <summary>
+            Web Url Link
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.Infromation">
+            <summary>
+            Extra Infroamiton
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.Price">
+            <summary>
+            Sale Price
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.InfulencePrice">
+            <summary>
+            Influener Pay Out
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.NumberSold">
+            <summary>
+            Units Sold
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.KeyWords">
+            <summary>
+            product Key Terms
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.Images">
+            <summary>
+            Images Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.SponsoredProduct.ProductClicks">
+            <summary>
+            Clicks Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Products.UserProductClick">
+            <summary>
+            /User Product Click Tracking
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.UserProductClick.ClickId">
+            <summary>
+            Record Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.UserProductClick.ClickDate">
+            <summary>
+            Clicked Date
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.UserProductClick.ProductId">
+            <summary>
+            Campaign
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.UserProductClick.Product">
+            <summary>
+            Product Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.UserProductClick.AccountId">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Products.UserProductClick.User">
+            <summary>
+            User Nav
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Ratings.AccountRating">
+            <summary>
+            Account Post Ratings
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Ratings.AccountRating.RattingId">
+            <summary>
+            Rating Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Ratings.AccountRating.PostId">
+            <summary>
+            Post ID
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Ratings.AccountRating.UserPost">
+            <summary>
+            USer Post Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Ratings.AccountRating.AccountId">
+            <summary>
+            User Account
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Ratings.AccountRating.UserAccount">
+            <summary>
+            User Account Nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Ratings.AccountRating.Rating">
+            <summary>
+            Rating
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Ratings.AccountRating.RatingText">
+            <summary>
+            Rating Message
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.Ratings.ProductReview">
+            <summary>
+            Product Review
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.Ratings.ProductReview.ReviewId">
+            <summary>
+            Review Id
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.Models.SocialMedia.SocialFeed">
+            <summary>
+            User Connected Social Media Feeds
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.SocialMedia.SocialFeed.FeedId">
+            <summary>
+            Feed Id
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.SocialMedia.SocialFeed.AccountId">
+            <summary>
+            Accoutn
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.SocialMedia.SocialFeed.User">
+            <summary>
+            User Account nav
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.SocialMedia.SocialFeed.Provider">
+            <summary>
+            Provider
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.SocialMedia.SocialFeed.PullFeeds">
+            <summary>
+            Pull Feeds
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.SocialMedia.SocialFeed.CrossPost">
+            <summary>
+            Cross Post feeds from this site
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.SocialMedia.SocialFeed.Followers">
+            <summary>
+            Current Followers
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.Models.SocialMedia.SocialFeed.Link">
+            <summary>
+            External Link
+            </summary>
+        </member>
+        <member name="T:Ovid.Data.OvidDbContext">
+            <summary>
+            Ovid General Db Context
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.AccountTypes">
+            <summary>
+            Account Types
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.Followeds">
+            <summary>
+            Follwed Accounts
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.UserAccounts">
+            <summary>
+            User Acocunts
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.UserIntrests">
+            <summary>
+            User Intrest
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.Advertisments">
+            <summary>
+            Advertisments
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.UserAddClicks">
+            <summary>
+            User Add Clicks
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.UserCampaignItemClicks">
+            <summary>
+            User Campign Item Clicks
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.UserCampaignClicks">
+            <summary>
+            User Capign Clicks
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.CampaignItems">
+            <summary>
+            Capaign Items
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.Campaigns">
+            <summary>
+            Campaigns
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.CampaignTypes">
+            <summary>
+            Camppgin Types
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.Salalaries">
+            <summary>
+            Slaaries
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.Ocupations">
+            <summary>
+            Ocupations
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.IntrestLists">
+            <summary>
+            Intrest list
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.Marketers">
+            <summary>
+            Marketers
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.UserPosts">
+            <summary>
+            User Post
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.PostImages">
+            <summary>
+            Post Images
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.UserProductClicks">
+            <summary>
+            Product Clicks
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.SponsoredProducts">
+            <summary>
+            Sponsored Products
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.ProductImages">
+            <summary>
+            Product Images
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.ProductCategories">
+            <summary>
+            Product Categories
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.AccountRatings">
+            <summary>
+            Accopunt Ratings
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.ProductReviews">
+            <summary>
+            Product Revies
+            </summary>
+        </member>
+        <member name="P:Ovid.Data.OvidDbContext.SocialFeeds">
+            <summary>
+            Social Medua Feeds
+            </summary>
+        </member>
+        <member name="M:Ovid.Data.OvidDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Ovid.Data.OvidDbContext})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Ovid.Data.OvidDbContext.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Ovid.Data.OvidDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Configure Connaction
+            </summary>
+            <param name="optionsBuilder"></param>
+        </member>
+        <member name="M:Ovid.Data.OvidDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Model Builder
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:Ovid.Data.Sales.OvidSalesContext">
+            <summary>
+            Ovid Sales Db Context
+            </summary>
+        </member>
+        <member name="M:Ovid.Data.Sales.OvidSalesContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Ovid.Data.Sales.OvidSalesContext})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Ovid.Data.Sales.OvidSalesContext.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Ovid.Data.Sales.OvidSalesContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Configure Connection
+            </summary>
+            <param name="optionsBuilder"></param>
+        </member>
+        <member name="M:Ovid.Data.Sales.OvidSalesContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Model Builder
+            </summary>
+            <param name="builder"></param>
+        </member>
+    </members>
+</doc>

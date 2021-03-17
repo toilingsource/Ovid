@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Ovid.GitLabDocument": {
+      "commandName": "Project",
+      "commandLineArgs": "-f \"D:\\Ovid\\Ovid\\Ovid.Data\\bin\\Debug\\netstandard2.1\\Ovid.Data.dll\" -s -o \"D:\\Ovid\\Documents\\Generated\" -x \"D:\\Ovid\\Ovid\\Ovid.Data\\Ovid.Data.xml\""
+    }
+  }
+}

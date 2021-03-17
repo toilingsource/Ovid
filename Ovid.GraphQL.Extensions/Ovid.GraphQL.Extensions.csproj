@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HotChocolate" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Abstractions" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Data" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Data.Spatial" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Execution" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Fetching" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Language" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Server" Version="10.5.5" />
+    <PackageReference Include="HotChocolate.Subscriptions" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Subscriptions.InMemory" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Types" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Types.CursorPagination" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Types.Filters" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Types.OffsetPagination" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Types.Sorting" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.Utilities" Version="11.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Resolvers\Messages\" />
+    <Folder Include="Resolvers\Notifications\" />
+    <Folder Include="Resolvers\Reputation\" />
+    <Folder Include="Types\Messages\" />
+    <Folder Include="Types\Notifications\" />
+    <Folder Include="Types\Reputation\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ovid.Data\Ovid.Data.csproj" />
+  </ItemGroup>
+
+</Project>
