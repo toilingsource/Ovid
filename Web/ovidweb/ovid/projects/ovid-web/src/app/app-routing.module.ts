@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'account', loadChildren: () => import('./accounts/accounts.module').then(m => m.AccountsModule) },
   { path: 'tools', loadChildren: () => import('./tools/tools.module').then(m => m.ToolsModule) },
   { path: 'home', loadChildren: () => import('./landing/landing.module').then(m => m.LandingModule) },
+  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: '**', component: PageNotFoundComponent }
 ];
