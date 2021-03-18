@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { OvidGraphService } from './ovid-graph.service';
+import { AccountService } from './account.service';
 
-describe('OvidGraphService', () => {
-  let service: OvidGraphService;
+describe('AccountService', () => {
+  let service: AccountService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(OvidGraphService);
+    service = TestBed.inject(AccountService);
   });
 
   it('should be created', () => {
