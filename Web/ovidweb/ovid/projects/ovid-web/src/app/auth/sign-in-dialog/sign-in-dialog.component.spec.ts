@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OvidAuthComponent } from './ovid-auth.component';
+import { SignInDialogComponent } from './sign-in-dialog.component';
 
-describe('OvidAuthComponent', () => {
-  let component: OvidAuthComponent;
-  let fixture: ComponentFixture<OvidAuthComponent>;
+describe('SignInDialogComponent', () => {
+  let component: SignInDialogComponent;
+  let fixture: ComponentFixture<SignInDialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OvidAuthComponent ]
+      declarations: [ SignInDialogComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OvidAuthComponent);
+    fixture = TestBed.createComponent(SignInDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
