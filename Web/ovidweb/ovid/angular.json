@@ -1,0 +1,248 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ovid-web": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/ovid-web",
+      "sourceRoot": "projects/ovid-web/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ovid-web",
+            "index": "projects/ovid-web/src/index.html",
+            "main": "projects/ovid-web/src/main.ts",
+            "polyfills": "projects/ovid-web/src/polyfills.ts",
+            "tsConfig": "projects/ovid-web/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ovid-web/src/favicon.ico",
+              "projects/ovid-web/src/assets"
+            ],
+            "styles": [
+              "projects/ovid-web/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ovid-web/src/environments/environment.ts",
+                  "with": "projects/ovid-web/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ovid-web:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ovid-web:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ovid-web:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ovid-web/src/test.ts",
+            "polyfills": "projects/ovid-web/src/polyfills.ts",
+            "tsConfig": "projects/ovid-web/tsconfig.spec.json",
+            "karmaConfig": "projects/ovid-web/karma.conf.js",
+            "assets": [
+              "projects/ovid-web/src/favicon.ico",
+              "projects/ovid-web/src/assets"
+            ],
+            "styles": [
+              "projects/ovid-web/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ovid-web/tsconfig.app.json",
+              "projects/ovid-web/tsconfig.spec.json",
+              "projects/ovid-web/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ovid-web/e2e/protractor.conf.js",
+            "devServerTarget": "ovid-web:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ovid-web:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "ovid-models": {
+      "projectType": "library",
+      "root": "projects/ovid-models",
+      "sourceRoot": "projects/ovid-models/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ovid-models/tsconfig.lib.json",
+            "project": "projects/ovid-models/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ovid-models/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ovid-models/src/test.ts",
+            "tsConfig": "projects/ovid-models/tsconfig.spec.json",
+            "karmaConfig": "projects/ovid-models/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ovid-models/tsconfig.lib.json",
+              "projects/ovid-models/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ovid-auth": {
+      "projectType": "library",
+      "root": "projects/ovid-auth",
+      "sourceRoot": "projects/ovid-auth/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ovid-auth/tsconfig.lib.json",
+            "project": "projects/ovid-auth/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ovid-auth/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ovid-auth/src/test.ts",
+            "tsConfig": "projects/ovid-auth/tsconfig.spec.json",
+            "karmaConfig": "projects/ovid-auth/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ovid-auth/tsconfig.lib.json",
+              "projects/ovid-auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ovid-graph": {
+      "projectType": "library",
+      "root": "projects/ovid-graph",
+      "sourceRoot": "projects/ovid-graph/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ovid-graph/tsconfig.lib.json",
+            "project": "projects/ovid-graph/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ovid-graph/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ovid-graph/src/test.ts",
+            "tsConfig": "projects/ovid-graph/tsconfig.spec.json",
+            "karmaConfig": "projects/ovid-graph/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ovid-graph/tsconfig.lib.json",
+              "projects/ovid-graph/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ovid-web"
+}
